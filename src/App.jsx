@@ -4,14 +4,17 @@ import Portfolio from './Generator'
 
 function App() {
 
-  const [html, setHtml] = useState("Generated html");
+  const [htmlContent, setHtml] = useState("Generated html");
 
   return (
     <div className='flex gap-5 max-h-screen w-full'>
       <Portfolio setHtml={setHtml}/>
-      <div className="flex-grow">
-        {html}
-      </div>
+      <iframe
+        title="HTML Viewer"
+        width="600"
+        height="900"
+        srcDoc={htmlContent}
+      ></iframe>
     </div>
   )
 }
