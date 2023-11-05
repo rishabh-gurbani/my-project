@@ -32,7 +32,7 @@ const submitFormHandler = async (name,
 
 
         try{
-            const response = await fetch(`http://localhost:3001/generate-portfolio`,
+            const response = await fetch(`https://aigenerator-8kh4.onrender.com/generate-portfolio`,
                 {
                     method: 'POST',
                     headers: headers,
